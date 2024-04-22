@@ -5,15 +5,67 @@
   </head>
   <body>
 <h1>Person</h1>
-  
+<form method='get'>
 
-  <p>
     <input type="text" placeholder="your name">
-  </p>
-  <p>
-    <input type="text" placeholder="age">
-  </p>
   
+    <input type="text" placeholder="age">
+  
+  <select name="select-one-of" style ='width: 170px;'>
+    <option>English</option>
+    <option>Russian</option>
+    <option>Italian</option>
+  </select>
 
+<select name="select-many-of" multiple size="4" style='width: 170px;'>
+<option>music</option>
+<option>sport</option>
+<option>food</option>
+<option>traveling</option>  
+  </select>
+
+  <select name='select-grouped' style="width: 170px;">
+    <optgroup label="Music">
+      <option>Jass</option>
+      <option>Pop</option>
+      <optgroup label="Sport">
+        <option>Football</option>
+        <option>Swimming</option>
+        <option>Hockey</option>
+      </select>
+    
+  <button type='submit'>Отправить</button>
+  <button type='reset'>Сбросить</button>
+  
+<fieldset>
+  <legend>обязательно</legend>
+<input type="text" required placeholder="write you name">
+</fieldset>
+<fieldset>
+ <legend>введите имя пользователя</legend>
+   <input placeholder='от 1 до 10 символов' type='text' minlength="1" maxlength="10" required>
+</fieldset>
+<fieldset>
+  <legend>введите пароль</legend>
+  <input type='password' name='password' placeholder='min 3' minlength='3' maxlength='10' required>
+</fieldset>
+<fieldset>
+  <legend>write your email</legend>
+  <input type="email" name='email' placeholder='Email' required>
+</fieldset>
+<fieldset>
+  <legend>your phone number</legend>
+  <input type="tel" name='phone' placeholder="number" pattern="\+7\d{10}" required>
+</fieldset>
+<fieldset>
+  <legend>adress</legend>
+  <input type="url" name='url' placeholder="сайт" required>
+</fieldset>
+<fieldset>
+ 
+  <input type="submit" name='submit' placeholder="Отправить" required>
+</fieldset>
+    
+</form>
 </body>
 </html>
